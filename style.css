@@ -81,14 +81,28 @@ header {
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
-  margin: 26px 16px 26px 20px;
+  margin: 26px -2px 26px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+}
+.btn-value{
+  display:inline-block;
+  background-color: hsl(360, 91%, 36%);
+  color: white;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 26px 16px 26px -2px;
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
@@ -252,6 +266,37 @@ button[disabled] {
   font-size: 15px;
   border: 1px black solid;
   font-family: sans-serif;
+}
+
+.slider-container{
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.slider{
+  width: 100%;
+  height:25px;
+  outline: none;
+  background:  lightgray;
+  -webkit-appearance: none;
+  border: 1px rgba(0, 0, 0, 0.038) solid;
+  border-radius: 15px;
+}
+
+.slider::-webkit-slider-thumb{
+  background:  hsl(360, 91%, 36%);
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.slider::-moz-range-thumb{
+  background:  hsl(360, 91%, 36%);
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
 }
 
 /* Ending criteria styling*/

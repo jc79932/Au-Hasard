@@ -27,11 +27,17 @@
         </div>
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
+          <div class="btn-value" id="slider-value-output">8</div>
         </br>
           <div class="dropdown">
             <p class="material-icons">chevron_right</p>
-              
+
               <div class="dropdown-criteria">
+
+                <div class="slider-container">
+                  <input type="range" min="8" max="128" value="8" class="slider" id="slider-value">
+                </div>
+
                 <label class="container">Lowercase
                   <input type="checkbox" id="lc" name="lowercase" value="yes" checked="checked">
                   <span class="checkmark"></span>

@@ -1,3 +1,16 @@
+//TODO  https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
+//Slider code
+var slider = document.getElementById("slider-value");
+var output = document.getElementById("slider-value-output");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+
+
 // Assignment code here
 
 
