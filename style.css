@@ -224,6 +224,36 @@ button[disabled] {
   transform: rotate(45deg);
 }
 
+.info-lc, .info-uc{
+  margin-left: 78.5%;
+  position: relative;
+}
+
+.info-nc{
+  margin-left: 81.9%;
+  position: relative;
+}
+
+.info-sc{
+  margin-left: 67.3%;
+  position: relative;
+}
+
+.info-lc-content, .info-uc-content, .info-nc-content, .info-sc-content{
+  display:none;
+  position:absolute;
+}
+
+.info-lc:hover .info-lc-content, .info-uc:hover .info-uc-content, .info-nc:hover .info-nc-content, .info-sc:hover .info-sc-content{
+  display: block;
+  background-color: white;
+  z-index: 5;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px black solid;
+  font-family: sans-serif;
+}
+
 /* Ending criteria styling*/
 
 @media (max-width: 690px) {
