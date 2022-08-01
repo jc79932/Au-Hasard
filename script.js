@@ -16,19 +16,21 @@ const combUc = 26 - 1;
 const combLc = 52 - 1;
 const combNc = 62 - 1;
 const combSc = 92 - 1;
-let SVal = document.getElementById("slider-value-output");
+
 
 const combinations = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 
 let temp = 1;
 let tempPassword = "";
-let testSVal = 10;
+let testSVal = slider.value;
 console.log(combinations.charAt(Math.floor(Math.random() * 92) + 1));
-console.log(Lc.checked, Uc, Nc, Sc);
+
 
 function generatePassword(){
+  let SVal = document.getElementById("slider-value-output").innerHTML;
   tempPassword = "";
-  for (let i=0; i<10;i++){
+  console.log(SVal);
+  for (let i=0; i<SVal;i++){
     temp = Math.floor(Math.random() * 92) + 1;
     console.log(temp);
     if ((Uc.checked==true) && (temp<=combUc)){
