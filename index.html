@@ -18,7 +18,9 @@
           <h2>Generate a Password</h2>
         </div>
         <div class="card-body">
+          <div class="card-body-child" id="clipboard-opacity">Copied to clipboard.</div>
           <textarea
+            onclick = copyPaste()
             readonly
             id="password"
             placeholder="Your Secure Password"

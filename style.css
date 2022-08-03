@@ -57,7 +57,24 @@ header {
 
 .card-body {
   min-height: 100px;
+  position: relative;
+ 
 }
+
+.card-body-child{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: hsla(206, 17%, 28%);
+  font-weight: 700;
+}
+
+#clipboard-opacity{
+  opacity: 0;
+}
+
 
 .card-footer {
   text-align: center;
@@ -304,17 +321,92 @@ button[disabled] {
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
-    margin: 16px 0px 0px 0px;
+    margin: 16px -2px 0px 0px;
     padding: 10px 15px;
   }
-
+  .btn-value{
+    font-size: 1rem;
+    margin: 16px 0px 0px -2px;
+    padding: 10px 15px;
+  }
   #password {
     font-size: 1rem;
   }
+  .container {
+    margin-bottom: 12px;
+    margin-left:4%;
+    padding-left: 14%;
+    
+    font-size: 16px;
+  }
+  .info-lc, .info-uc{
+    margin-left: 58.5%;
+  }
+  
+  .info-nc{
+    margin-left: 64.6%;
+  }
+  
+  .info-sc{
+    margin-left: 37.5%;
+  }
+
+  .info-lc:hover .info-lc-content, .info-uc:hover .info-uc-content, .info-nc:hover .info-nc-content, .info-sc:hover .info-sc-content{
+    transform: translateX(-95%);
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
+  .card-header > h2{
+    font-size: 22px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 15px;
+  }
   .btn {
     font-size: 0.8rem;
+    margin: 16px -2px 0px 0px;
+    padding: 10px 15px;
+  }
+  .btn-value{
+    font-size: 0.8rem;
+    margin: 16px 0px 0px -2px;
+    padding: 10px 15px;
+  }
+  #password {
+    font-size: 1rem;
+  }
+  .container {
+    margin-bottom: 12px;
+    margin-left:4%;
+    padding-left: 14%;
+    
+    font-size: 16px;
+  }
+  .dropdown{
+    margin-top: 12px;
+  }
+
+  .dropdown > p{
+    margin-left: 9%;
+  }
+  .dropdown:hover > p{
+    margin: 0px 0px 0px 83%;
+    
+  }
+  .info-lc, .info-uc{
+    margin-left: 48.5%;
+  }
+  
+  .info-nc{
+    margin-left: 56.1%;
+  }
+  
+  .info-sc{
+    margin-left: 24.5%;
+  }
+
+  .info-lc:hover .info-lc-content, .info-uc:hover .info-uc-content, .info-nc:hover .info-nc-content, .info-sc:hover .info-sc-content{
+    transform: translateX(-95%);
   }
 }

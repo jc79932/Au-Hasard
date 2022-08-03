@@ -1,4 +1,5 @@
-//TODO  https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
+
+//TODO Add alert boxes warning none selected
 //Slider code
 var slider = document.getElementById("slider-value");
 var output = document.getElementById("slider-value-output");
@@ -6,7 +7,22 @@ output.innerHTML = slider.value;
 slider.oninput = function() {
   output.innerHTML = this.value;
 }
-
+//Copy Paste code
+var clipboardMessage = document.getElementById("clipboard-opacity")
+function copyPaste() {
+  var grabText = document.getElementById("password");
+  grabText.select();
+  grabText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(grabText.value);
+  // alert("Copied password to clipboard. " + grabText.value);
+  clipboardMessage.style.opacity = 1;
+  for(let i=0; i<1000; i++){
+    
+    clipboardMessage.style.opacity = clipboardMessage.style.opacity - 0.001;
+    setTimeout(1000);
+    console.log(clipboardMessage.style.opacity);
+  }
+}
 // Assignment code here
 let Lc = document.getElementById("lc"); 
 let Uc = document.getElementById("uc");
@@ -45,9 +61,11 @@ function generatePassword(){
     } else if ((Sc.checked==true) && (temp<=combSc) && (temp>combNc)){
       tempPassword = tempPassword + combinations.charAt(temp);
       
-    }  else{
+    } else if ((Uc.checked==false) && (Lc.checked==false) &&(Nc.checked==false) &&(Sc.checked==false)){
+      window.alert("Please select at least one of the criteria.")
+      break;
+    } else {
         i--;
-        
       }
       console.log(tempPassword);
     }
