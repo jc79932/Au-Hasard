@@ -1,5 +1,5 @@
 
-//TODO Add alert boxes warning none selected
+
 //Slider code
 var slider = document.getElementById("slider-value");
 var output = document.getElementById("slider-value-output");
@@ -8,20 +8,29 @@ slider.oninput = function() {
   output.innerHTML = this.value;
 }
 //Copy Paste code
-var clipboardMessage = document.getElementById("clipboard-opacity")
+var id = null;
+  function copyPasteFade() {
+    var CO = document.getElementById("clipboard-opacity");   
+    var val = 1.0;
+    CO.style.opacity = 1.0;
+    clearInterval(id);
+    id = setInterval(frame, 10);
+    function frame() {
+      if (val == 0) {
+        clearInterval(id);
+      } else {
+        val = val - 0.01;
+        CO.style.opacity = val;
+      }
+    }
+  }
 function copyPaste() {
   var grabText = document.getElementById("password");
   grabText.select();
   grabText.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(grabText.value);
   // alert("Copied password to clipboard. " + grabText.value);
-  clipboardMessage.style.opacity = 1;
-  for(let i=0; i<1000; i++){
-    
-    clipboardMessage.style.opacity = clipboardMessage.style.opacity - 0.001;
-    setTimeout(1000);
-    console.log(clipboardMessage.style.opacity);
-  }
+  copyPasteFade();
 }
 // Assignment code here
 let Lc = document.getElementById("lc"); 
